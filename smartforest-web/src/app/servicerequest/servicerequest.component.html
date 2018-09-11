@@ -1,0 +1,94 @@
+<style>
+  @import '/assets/vendor/semantic.min.css';
+
+  .ui.menu .item img.logo {
+      margin-right: 1.5em;
+  }
+
+  form.ui.segment.form {
+    background-color: #F1F9FF;
+    margin-top: 2em;
+  }
+
+  form.form:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .votes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6E6E6;
+    padding: 1em 0;
+    border-radius: 5px;
+  }
+
+  .ui.grid.posts {
+    margin-top: 2em;
+  }
+
+  .meta {
+    color: #9A9A9A
+  }
+
+  .ui.grid>.row>.column.votes {
+    display: flex;
+  }
+
+  ul.ui.list li:before {
+    content: '';
+  }
+
+  .voters {
+    clear: both;
+    width: 100%;
+  }
+
+</style>
+<div class="container">
+<hr>
+<h2>서비스 신청</h2>
+<form class="ui large form segment">
+  <div class="field">
+    <label for="userID">아이디</label>
+    <textarea name="userID" rows="1" #newuserID></textarea>
+  </div>
+  <div class="field">
+    <label for="PassWord">비밀번호</label>
+    <textarea name="PassWord" rows="1" #newpassword></textarea>
+  </div>
+  <div class="field">
+    <label for="name">이름</label>
+    <textarea name="Name" rows="1" #newname></textarea>
+  </div>
+  <div class="field">
+    <label for="phone">전화번호</label>
+    <textarea name="Phone" rows="1" #newphone></textarea>
+  </div>
+  <div class="field">
+    <label for="email">이메일</label>
+    <textarea name="Email" rows="1" #newemail></textarea>
+  </div>
+  <hr>
+  <div class="field">
+    <label for="companyname">회사명</label>
+    <textarea name="CompanyName" rows="1" #newcompanyname></textarea>
+  </div>
+  <div class="field">
+    <label for="companyphone">회사 전화번호</label>
+    <textarea name="CompanyPhone" rows="1" #newcompanyphone></textarea>
+  </div>
+  <div class="field">
+    <label for="name">회사 주소</label>
+    <textarea name="CompanyAddress" rows="1" #newcompanyaddress></textarea>
+  </div>
+
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+  <button (click)="tryrequest(newuserID, newpassword, newname, newphone, newemail, newcompanyname, newcompanyphone, newcompanyaddress)" class="ui positive right floated button">신청하기</button>
+</form>
+<hr>
+</div>

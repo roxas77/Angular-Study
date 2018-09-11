@@ -1,0 +1,43 @@
+<style>
+@font-face {
+  font-family: 'Moebius';
+  src: url('/assets/fonts/Moebius_Regular_kor.ttf') format('truetype');
+}
+.nav-link{
+  font-family: 'Moebius';
+  font-size: 1.2rem;
+}
+</style>
+
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">
+    <img src="assets/img/logo_white.png" alt="Logo" />
+  </a>
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="home">홈</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="sitelist">사이트관리상태</a>
+      </li>
+    </ul>
+    <!--바로가기 링크 아이콘-->
+    <ul class="navbar-nav" routerLinkActive="active">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login">로그인</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="servicerequest">서비스신청</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
