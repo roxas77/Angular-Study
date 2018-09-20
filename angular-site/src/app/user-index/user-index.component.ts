@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { User } from '../user';
 
@@ -13,13 +14,9 @@ export class UserIndexComponent implements OnInit {
   users: User[];
 
   constructor(
-    private userService: UserService,
+    private route: ActivatedRoute,
   ) {
-    this.userService.index()
-    .then(users =>
-      this.users = users
-    )
-    .catch(response => null);
+    this.users = this.route.snapshot.data['users']; //1
   }
 
   ngOnInit() {
