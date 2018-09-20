@@ -1,3 +1,13 @@
+body {
+  color: #0C2E2B;
+}
+a {
+  cursor: pointer;
+}
+.page {
+  margin: 0 auto;
+  font-size: 12px;
+}
 .page form label {
   padding: 3px;
   margin-bottom: 0;
